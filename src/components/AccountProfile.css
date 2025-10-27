@@ -1,0 +1,165 @@
+/* src/components/AccountProfile.css */
+
+.account-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem; /* Добавим отступ снизу */
+}
+
+/* Уменьшим хлебные крошки на этой странице */
+.account-breadcrumbs {
+    padding: 0; /* Убираем стандартный паддинг */
+    font-size: 0.875rem;
+    color: #7d8184; /* Серый цвет как на картинке */
+}
+.account-breadcrumbs a {
+    color: #7d8184;
+}
+.account-breadcrumbs span {
+    color: #000; /* Последний элемент черный */
+}
+
+
+.welcome-message {
+  font-size: 0.875rem;
+}
+
+.welcome-username {
+  color: #DB4444; /* Красный цвет для имени */
+  font-weight: 500;
+}
+
+.account-container {
+  display: flex;
+  gap: 4rem; /* Отступ между боковой панелью и основным контентом */
+  align-items: flex-start;
+  margin-bottom: 5rem;
+}
+
+/* --- Боковая панель --- */
+.account-sidebar {
+  flex: 0 0 250px; /* Фиксированная ширина */
+  font-size: 1rem;
+}
+
+.sidebar-section {
+  margin-bottom: 2rem;
+}
+
+.sidebar-section h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.sidebar-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-section li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem; /* Отступ для элементов списка */
+}
+
+.sidebar-section li a {
+  color: #7d8184; /* Серые ссылки */
+  text-decoration: none;
+}
+
+.sidebar-section li.active a,
+.sidebar-section li a:hover {
+  color: #DB4444; /* Красный для активной/при наведении */
+}
+
+/* Стиль для отдельной ссылки Wishlist */
+.wishlist-link {
+    color: #7d8184;
+    text-decoration: none;
+}
+.wishlist-link:hover {
+    color: #DB4444;
+}
+
+
+/* --- Основной контент --- */
+.account-main {
+  flex-grow: 1; /* Занимает оставшееся место */
+}
+
+.edit-profile-form {
+  padding: 2.5rem 3.5rem; /* Внутренние отступы формы */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  border-radius: 4px;
+}
+
+.edit-profile-form h3 {
+  color: #DB4444; /* Красный заголовок */
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 2rem; /* Отступ между инпутами в ряду */
+  margin-bottom: 1.5rem;
+}
+
+.form-group.half-width {
+  flex: 1; /* Каждый инпут занимает половину */
+}
+
+/* Переиспользуем стили из Checkout.css, где возможно */
+.edit-profile-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #000; /* Лейблы здесь черные */
+}
+
+.edit-profile-form .form-group input[type="text"],
+.edit-profile-form .form-group input[type="email"],
+.edit-profile-form .form-group input[type="password"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.edit-profile-form .form-group input:focus {
+  outline: 1px solid #aaa;
+}
+
+
+.password-section input[type="password"] {
+  margin-bottom: 1rem; /* Отступ между полями пароля */
+}
+/* Убираем отступ у последнего поля пароля */
+.password-section input[type="password"]:last-child {
+  margin-bottom: 0;
+}
+
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end; /* Кнопки справа */
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-cancel {
+  background: none;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Используем .btn-primary из Cart.css */
+.btn-save {
+   padding: 1rem 3rem; /* Специфичный паддинг */
+}

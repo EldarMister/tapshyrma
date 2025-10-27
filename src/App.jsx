@@ -2,18 +2,21 @@
 
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
-// import Cart from './components/Cart.jsx';       // <-- Эту строку нужно закомментировать или удалить
-import Checkout from './components/Checkout.jsx'; // <-- Эта строка должна быть
-import './components/Cart.css';                // Стили для Cart оставляем (там общие стили)
-import './components/Checkout.css';            // <-- Эта строка должна быть
+// import Cart from './components/Cart.jsx';
+// import Checkout from './components/Checkout.jsx'; // Комментируем Checkout
+import AccountProfile from './components/AccountProfile.jsx'; // Импортируем AccountProfile
+import './components/Cart.css';      // Оставляем для общих стилей (кнопки и т.д.)
+import './components/Checkout.css';  // Оставляем для общих стилей (формы и т.д.)
+import './components/AccountProfile.css'; // Добавляем новый CSS
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        {/* <Cart /> */}                {/* <-- Эту строку нужно закомментировать или удалить */}
-        <Checkout />                  {/* <-- А эта строка должна быть вместо Cart */}
+        {/* <Cart /> */}
+        {/* <Checkout /> */}
+        <AccountProfile /> {/* Отображаем AccountProfile */}
       </main>
       <Footer />
     </>
