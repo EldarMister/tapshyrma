@@ -1,0 +1,156 @@
+/* src/components/Checkout.css */
+
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem; /* Отступ между колонками */
+  align-items: flex-start; /* Колонки начинаются сверху */
+  margin-bottom: 5rem;
+}
+
+/* --- Левая колонка: Billing Details --- */
+.billing-details {
+  flex: 1.5; /* Форма занимает больше места */
+}
+
+.billing-details h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #7d8184;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  background-color: #f5f5f5; /* Светло-серый фон */
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: 1px solid #aaa;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.checkbox-group label {
+  margin-bottom: 0; /* Убираем нижний отступ у label в чекбоксе */
+  color: #000; /* Черный цвет текста чекбокса */
+}
+
+
+/* --- Правая колонка: Order Summary --- */
+.order-summary {
+  flex: 1; /* Занимает оставшееся место */
+  padding-top: 1rem; /* Небольшой отступ сверху для выравнивания */
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.summary-item-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.summary-item-image {
+  width: 40px; /* Маленькие картинки товаров */
+  height: auto;
+}
+
+.summary-totals {
+  margin-bottom: 2rem;
+}
+
+.summary-totals hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0.5rem 0;
+}
+
+.summary-totals .total-row {
+  padding: 0.75rem 0;
+}
+
+.summary-totals .total-amount {
+  font-weight: 500;
+}
+
+.payment-method {
+  margin-bottom: 2rem;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.payment-option input[type="radio"] {
+  margin-right: 0.75rem;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.payment-option label {
+  margin-right: auto; /* Отодвигает иконки вправо */
+}
+
+.bank-icons {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1rem; /* Отступ от слова Bank */
+}
+
+.bank-icons img {
+  height: 20px; /* Размер иконок платежных систем */
+  width: auto;
+}
+
+.checkout-coupon {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.checkout-coupon input {
+  flex-grow: 1; /* Инпут занимает все доступное место */
+  border: 1px solid #000;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Стили для кнопок .btn-primary уже есть в Cart.css, но сделаем специфичную */
+.place-order-btn {
+  width: auto; /* Кнопка не на всю ширину */
+  padding: 1rem 3rem; /* Чуть больше паддинг */
+}
