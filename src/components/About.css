@@ -1,0 +1,196 @@
+/* src/components/About.css */
+
+/* --- Our Story Section --- */
+.our-story-section {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+.story-text {
+  flex: 1;
+}
+
+.story-text h2 {
+  font-size: 2.8rem; /* Крупный заголовок */
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.story-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #333; /* Чуть светлее черного */
+}
+
+.story-image {
+  flex: 1.2; /* Картинка чуть больше текста */
+  background-color: #fdd; /* Розовый фон для картинки */
+  border-radius: 4px;
+  overflow: hidden; /* Чтобы картинка не вылезала за фон */
+}
+
+.story-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* --- Stats Section --- */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Адаптивные колонки */
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.stat-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease; /* Плавный переход для hover */
+}
+
+.stat-card:hover,
+.stat-card.active {
+  background-color: #DB4444; /* Красный фон */
+  color: #fff; /* Белый текст */
+  border-color: #DB4444;
+  transform: translateY(-5px); /* Легкий подъем при наведении */
+  box-shadow: 0 8px 15px rgba(219, 68, 68, 0.2); /* Тень для активной/hover */
+}
+
+.stat-icon-wrapper {
+  background-color: #ccc; /* Серый круг */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border: 8px solid #fff; /* Белая обводка */
+  box-sizing: content-box; /* Чтобы border не влиял на размер */
+  transition: background-color 0.3s ease;
+}
+.stat-card:hover .stat-icon-wrapper,
+.stat-card.active .stat-icon-wrapper {
+   background-color: #fff; /* Белый круг на красном фоне */
+   color: #000; /* Черная иконка */
+   border-color: #DB4444; /* Красная обводка */
+}
+
+.stat-icon-wrapper svg {
+  font-size: 1.5rem;
+  stroke-width: 1.5;
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+/* --- Team Section --- */
+.team-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Три колонки */
+  gap: 2rem;
+  margin-bottom: 6rem;
+  text-align: center; /* Центрируем текст под картинками */
+}
+
+.team-member .team-image-wrapper {
+  background-color: #f5f5f5; /* Светло-серый фон для фото */
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  height: 350px; /* Примерная высота, чтобы картинки были одинаковые */
+  display: flex;
+  align-items: flex-end; /* Картинка прижата к низу */
+  justify-content: center;
+}
+
+.team-member img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Масштабируем фото */
+  object-position: top center; /* Показываем верхнюю часть фото */
+}
+
+.team-member h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+}
+
+.team-member p {
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.team-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.team-social-icons a {
+  color: #333;
+}
+.team-social-icons a:hover {
+  color: #DB4444;
+}
+
+/* --- Features Section --- */
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 4rem; /* Больший отступ */
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+.feature-card h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.feature-card p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.feature-icon-wrapper {
+  background-color: #333; /* Темный круг */
+  color: #fff; /* Белая иконка */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border: 8px solid #ccc; /* Серая обводка */
+  box-sizing: content-box;
+}
+
+.feature-icon-wrapper svg {
+  font-size: 1.5rem;
+  stroke-width: 1.5;
+}
