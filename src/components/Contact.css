@@ -1,0 +1,110 @@
+/* src/components/Contact.css */
+
+.contact-container {
+  display: flex;
+  gap: 2rem; /* Отступ между колонками */
+  align-items: flex-start;
+  margin-bottom: 5rem;
+  padding: 2rem; /* Добавим паддинг вокруг всего блока */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Легкая тень для всего блока */
+  border-radius: 4px;
+}
+
+/* --- Левая колонка --- */
+.contact-info {
+  flex: 0 0 300px; /* Фиксированная ширина левой колонки */
+}
+
+.info-block {
+  margin-bottom: 2rem;
+}
+.info-block:last-child {
+  margin-bottom: 0;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.info-icon {
+  background-color: #DB4444; /* Красный круг */
+  color: #fff; /* Белая иконка */
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-icon svg {
+  font-size: 1.1rem;
+}
+
+.info-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.info-block p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0 0 0.5rem 0; /* Отступы между параграфами */
+  color: #333;
+}
+
+.info-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
+}
+
+
+/* --- Правая колонка (Форма) --- */
+.contact-form-section {
+  flex-grow: 1; /* Занимает оставшееся место */
+}
+
+.contact-form .form-row-triplet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Три колонки */
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit; /* Наследуем шрифт */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Разрешаем менять размер только по вертикали */
+  min-height: 150px; /* Минимальная высота */
+  margin-bottom: 1.5rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 1px solid #aaa;
+}
+
+.contact-form-actions {
+  display: flex;
+  justify-content: flex-end; /* Кнопка справа */
+}
+
+/* Используем .btn-primary из Cart.css */
+.contact-form-actions .btn-primary {
+  padding: 1rem 3rem;
+}
