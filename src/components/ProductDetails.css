@@ -1,0 +1,412 @@
+/* src/components/ProductDetails.css */
+
+/* --- Общая секция деталей продукта --- */
+.product-details-section {
+  display: flex;
+  gap: 3rem; /* Отступ между галереей и инфо */
+  margin-bottom: 6rem;
+}
+
+/* --- Галерея --- */
+.product-gallery {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1.2; /* Галерея чуть больше инфо */
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 0 0 120px; /* Фиксированная ширина для превью */
+}
+
+.thumbnail-item {
+  background-color: #f5f5f5; /* Фон для превью */
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.thumbnail-item:hover, .thumbnail-item.active {
+  border-color: #DB4444; /* Красная рамка при наведении/активности */
+}
+
+.thumbnail-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Чтобы картинка помещалась целиком */
+}
+
+.main-image {
+  flex-grow: 1;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: 1px solid #eee; /* Тонкая рамка */
+}
+
+.main-image img {
+  display: block;
+  max-width: 100%;
+  max-height: 500px; /* Ограничим высоту */
+  object-fit: contain;
+}
+
+/* --- Информация о продукте --- */
+.product-info {
+  flex: 1;
+}
+
+.product-info h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.star {
+  color: #ccc; /* Цвет пустых звезд */
+  font-size: 0.9rem;
+}
+.star.filled, .star.half {
+  color: #FFAD33; /* Желтый цвет для заполненных */
+}
+
+.reviews {
+  color: #7d8184; /* Серый текст кол-ва отзывов */
+  margin-left: 0.3rem;
+}
+
+.separator {
+  color: #ccc;
+}
+
+.stock-status.in-stock {
+  color: #00A968; /* Зеленый */
+}
+.stock-status.out-of-stock {
+  color: #DB4444; /* Красный */
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 1.5rem 0;
+}
+
+.product-description {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.product-info .info-divider { /* Стилизуем разделитель */
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1.5rem 0;
+}
+
+.product-options {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.option-label {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.color-options {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.color-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff; /* Белая обводка */
+  outline: 1px solid #ccc; /* Серая обводка снаружи */
+  cursor: pointer;
+  transition: outline-color 0.2s;
+}
+.color-swatch:hover, .color-swatch.active {
+  outline-color: #000; /* Черная обводка при выборе/наведении */
+}
+
+.size-options {
+    gap: 1rem; /* Меньший отступ для размеров */
+}
+.size-buttons {
+    display: flex;
+    gap: 1rem;
+}
+.size-button {
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.size-button:hover, .size-button.active {
+  background-color: #DB4444;
+  color: #fff;
+  border-color: #DB4444;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quantity-selector {
+  display: flex;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+.quantity-selector button {
+  background: none;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-right: 1px solid #000; /* Разделитель для минуса */
+}
+.quantity-selector button:last-child {
+   border-right: none;
+   border-left: 1px solid #000; /* Разделитель для плюса */
+}
+.quantity-selector button:hover {
+  background-color: #DB4444;
+  color: #fff;
+}
+
+.quantity-selector input {
+  width: 50px;
+  text-align: center;
+  border: none;
+  font-size: 1rem;
+  padding: 0.6rem 0;
+  -moz-appearance: textfield; /* Убираем стрелки в Firefox */
+}
+.quantity-selector input::-webkit-outer-spin-button, /* Убираем стрелки в Chrome/Safari */
+.quantity-selector input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.buy-now-btn {
+  padding: 0.7rem 2.5rem; /* Немного другие паддинги */
+}
+
+.wishlist-btn {
+  border: 1px solid #000;
+  background: #fff;
+  padding: 0.5rem; /* Квадратная кнопка */
+  line-height: 1; /* Чтобы иконка была по центру */
+  border-radius: 4px;
+  cursor: pointer;
+}
+.wishlist-btn svg {
+  font-size: 1.4rem;
+}
+.wishlist-btn:hover {
+  background-color: #f5f5f5;
+}
+
+
+.delivery-info {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.delivery-info .info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.delivery-info .info-icon-delivery {
+    font-size: 2rem; /* Крупные иконки доставки */
+    flex-shrink: 0; /* Чтобы иконка не сжималась */
+}
+.delivery-info .info-title {
+    font-weight: 500;
+    margin: 0 0 0.3rem 0;
+}
+.delivery-info .info-subtitle {
+    font-size: 0.75rem;
+    color: #555;
+    margin: 0;
+}
+.delivery-info hr.info-divider {
+    margin: 0; /* Убираем отступы у разделителя */
+}
+
+
+/* --- Related Items Section --- */
+.related-items-section {
+    margin-bottom: 6rem;
+}
+.related-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.section-indicator {
+    width: 15px;
+    height: 30px;
+    background-color: #DB4444;
+    border-radius: 3px;
+}
+.related-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #DB4444;
+    margin: 0;
+}
+
+.related-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 4 колонки с автоподстройкой */
+    gap: 1.5rem;
+}
+
+.related-item-card {
+    /* Стили самой карточки */
+}
+
+.related-image-wrapper {
+    position: relative;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 2rem; /* Отступы вокруг картинки */
+    margin-bottom: 1rem;
+    overflow: hidden; /* Скрываем вылезающие кнопки */
+    height: 200px; /* Фиксированная высота для выравнивания */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.related-image-wrapper img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Плавное увеличение */
+}
+.related-item-card:hover .related-image-wrapper img {
+  transform: scale(1.1); /* Увеличиваем картинку при наведении */
+}
+
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #DB4444;
+    color: #fff;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    border-radius: 4px;
+}
+
+.related-card-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.icon-button {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.icon-button svg {
+    font-size: 1rem;
+}
+
+.add-to-cart-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.6rem;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+    transform: translateY(100%); /* Прячем кнопку */
+    transition: transform 0.3s ease;
+}
+.related-item-card:hover .add-to-cart-btn {
+    transform: translateY(0); /* Показываем кнопку при наведении */
+}
+
+
+.related-item-name {
+    font-weight: 500;
+    margin: 0 0 0.5rem 0;
+    white-space: nowrap; /* Предотвращаем перенос */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Добавляем троеточие */
+}
+
+.related-item-price {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+.current-price {
+    color: #DB4444;
+    font-weight: 500;
+}
+.old-price {
+    color: #7d8184;
+    text-decoration: line-through;
+}
+
+.related-item-card .rating {
+    justify-content: flex-start; /* Выравниваем звезды слева */
+}
+.related-item-card .reviews {
+    font-size: 0.8rem;
+}

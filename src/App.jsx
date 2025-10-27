@@ -4,12 +4,14 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 // import Cart from './components/Cart.jsx';
 // import Checkout from './components/Checkout.jsx';
-// import AccountProfile from './components/AccountProfile.jsx'; // Комментируем
-import Contact from './components/Contact.jsx'; // Импортируем Contact
+// import AccountProfile from './components/AccountProfile.jsx';
+// import Contact from './components/Contact.jsx'; // Комментируем Contact
+import ProductDetails from './components/ProductDetails.jsx'; // Импортируем ProductDetails
 import './components/Cart.css';
 import './components/Checkout.css';
 import './components/AccountProfile.css';
-import './components/Contact.css'; // Добавляем стили для Contact
+import './components/Contact.css';
+import './components/ProductDetails.css'; // Добавляем новый CSS
 
 function App() {
   return (
@@ -19,7 +21,8 @@ function App() {
         {/* <Cart /> */}
         {/* <Checkout /> */}
         {/* <AccountProfile /> */}
-        <Contact /> {/* Отображаем Contact */}
+        {/* <Contact /> */}
+        <ProductDetails /> {/* Отображаем ProductDetails */}
       </main>
       <Footer />
     </>
